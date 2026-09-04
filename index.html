@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#fff2f7">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>Good Morning Beb ❤️</title>
+<style>
+:root{--rose:#df5f8f;--rose2:#c94073;--ink:#5d4551;--soft:#fff5f9;--card:rgba(255,255,255,.88);--shadow:0 18px 50px rgba(155,72,107,.18)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;background:#fff4f8}
+body{margin:0;min-height:100svh;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 8%,#fff 0 6%,transparent 28%),radial-gradient(circle at 90% 4%,#fff 0 5%,transparent 24%),linear-gradient(145deg,#fff8fb,#ffeaf2 48%,#f6d9e5);overflow-x:hidden;padding-bottom:env(safe-area-inset-bottom)}
+button{font:inherit}
+
+/* iPhone-safe opening gate: the tap itself unlocks audio */
+#gate{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:max(22px,env(safe-area-inset-top)) 22px max(22px,env(safe-area-inset-bottom));background:linear-gradient(145deg,#fff8fb,#ffe6f0 55%,#f9d8e6);transition:opacity .8s ease,visibility .8s ease}
+#gate.hide{opacity:0;visibility:hidden;pointer-events:none}
+.gate-card{width:min(440px,100%);text-align:center;padding:34px 24px;border-radius:34px;background:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.9);box-shadow:var(--shadow);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.gate-heart{font-size:58px;animation:pulse 1.8s ease-in-out infinite}
+.gate-card h1{margin:10px 0 8px;font-size:clamp(2.1rem,10vw,3.2rem);line-height:1;color:var(--rose2);letter-spacing:-.04em}
+.gate-card p{margin:0 0 24px;line-height:1.55;color:#806673}
+#openBtn{border:0;border-radius:999px;padding:16px 24px;min-height:54px;width:min(280px,100%);background:linear-gradient(135deg,var(--rose),var(--rose2));color:white;font-weight:800;box-shadow:0 12px 28px rgba(201,64,115,.28);touch-action:manipulation}
+#musicStatus{min-height:20px;margin-top:12px;font-size:.86rem;color:#957785}
+@keyframes pulse{50%{transform:scale(1.09)}}
+
+.decor{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.float{position:absolute;bottom:-12vh;opacity:.3;animation:rise linear infinite;will-change:transform,opacity}
+@keyframes rise{0%{transform:translateY(0) rotate(0);opacity:0}12%{opacity:.32}100%{transform:translateY(-125vh) rotate(32deg);opacity:0}}
+
+main{position:relative;z-index:1;width:min(920px,calc(100% - 22px));margin:0 auto;padding:max(22px,env(safe-area-inset-top)) 0 48px;opacity:0;transform:translateY(10px)}
+main.show{animation:pageIn 1s ease .12s forwards}
+@keyframes pageIn{to{opacity:1;transform:none}}
+.hero{text-align:center;padding:20px 10px 8px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.72);box-shadow:0 8px 22px rgba(100,54,74,.08);font-size:.9rem;color:var(--rose2)}
+.hero h2{font-size:clamp(2.35rem,11vw,4.9rem);line-height:.95;letter-spacing:-.055em;margin:18px 0 10px;color:var(--rose2)}
+.hero p{font-size:clamp(1rem,4.2vw,1.25rem);line-height:1.65;margin:0 auto;max-width:650px;color:#7a616d}
+.card{margin-top:20px;padding:22px;border-radius:28px;background:var(--card);border:1px solid rgba(255,255,255,.9);box-shadow:var(--shadow);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.title{text-align:center;color:var(--rose2);font-size:1.35rem;margin:0 0 14px}
+.message{min-height:116px;display:grid;place-items:center;text-align:center;font-size:clamp(1.12rem,4.8vw,1.55rem);line-height:1.65;font-weight:600;color:#6b4f5c;padding:8px}
+.cursor{animation:blink .85s step-end infinite;color:var(--rose2)}
+@keyframes blink{50%{opacity:0}}
+
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.polaroid{background:white;padding:9px 9px 15px;border-radius:20px;box-shadow:0 12px 28px rgba(88,55,71,.13)}
+.polaroid:nth-child(1){transform:rotate(-1.4deg)}.polaroid:nth-child(2){transform:rotate(1.1deg)}.polaroid:nth-child(3){transform:rotate(.8deg)}.polaroid:nth-child(4){transform:rotate(-.9deg)}
+.polaroid img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;background:#f4e7ec}
+.cap{text-align:center;font-weight:700;color:#7d6170;font-size:.92rem;margin-top:10px;line-height:1.3}
+
+.counter-intro{text-align:center;color:#856c78;margin:-2px 0 14px}
+.counter{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.unit{text-align:center;padding:16px 8px;border-radius:20px;background:linear-gradient(180deg,#fff,#fff0f6);border:1px solid rgba(223,95,143,.12)}
+.unit b{display:block;color:var(--rose2);font-size:clamp(1.45rem,7vw,2.35rem);line-height:1}.unit span{display:block;margin-top:7px;font-size:.83rem;color:#8e7480}
+
+.question{text-align:center;overflow:hidden}
+.question>p{margin:0 0 14px;color:#806673}
+.stage{position:relative;min-height:160px;border-radius:22px;background:linear-gradient(180deg,#fffafd,#ffedf4);border:1px dashed rgba(201,64,115,.2);overflow:hidden;touch-action:manipulation}
+.answer{position:absolute;top:49px;border:0;border-radius:999px;min-width:118px;min-height:52px;padding:13px 18px;font-weight:800;touch-action:manipulation;user-select:none;-webkit-user-select:none;transition:transform .15s ease,box-shadow .15s ease}
+#yes{left:18%;background:linear-gradient(135deg,var(--rose),var(--rose2));color:white;box-shadow:0 10px 24px rgba(201,64,115,.25);z-index:2}
+#no{right:18%;background:white;color:var(--rose2);border:1px solid rgba(201,64,115,.15);z-index:3}
+#tease{min-height:26px;margin-top:14px;color:var(--rose2);font-weight:700}
+#final{display:none;margin-top:14px;padding:20px;border-radius:22px;background:linear-gradient(135deg,#fff,#ffeaf2);animation:pop .5s ease}
+#final.show{display:block}
+#final h3{margin:0 0 8px;color:var(--rose2);font-size:1.6rem}
+#final p{margin:0;line-height:1.7}
+@keyframes pop{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+.footer{text-align:center;font-size:.95rem;line-height:1.7;color:#826a76}
+
+.mute{position:fixed;right:max(12px,env(safe-area-inset-right));bottom:max(12px,env(safe-area-inset-bottom));z-index:50;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.9);background:rgba(255,255,255,.88);box-shadow:0 10px 28px rgba(106,58,78,.14);font-size:20px;display:none;place-items:center;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.mute.show{display:grid}
+.confetti{position:fixed;top:-30px;z-index:100;pointer-events:none;animation:fall 2.7s linear forwards}
+@keyframes fall{to{transform:translateY(112svh) rotate(390deg);opacity:0}}
+
+@media(max-width:700px){
+  main{width:min(100% - 16px,920px)}
+  .card{padding:18px;border-radius:24px;margin-top:16px}
+  .gallery{grid-template-columns:1fr;gap:16px}
+  .polaroid{padding:8px 8px 14px}
+  .polaroid img{aspect-ratio:3/4;max-height:72svh}
+  .counter{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stage{min-height:190px}
+  #yes{left:8%;top:42px}#no{right:8%;top:42px}
+}
+@media(max-width:380px){.hero h2{font-size:2.3rem}.answer{min-width:104px;padding:12px}.stage{min-height:205px}.cap{font-size:.88rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div id="gate">
+  <div class="gate-card">
+    <div class="gate-heart">💗</div>
+    <h1>For Kon Pov</h1>
+    <p>A little good-morning surprise from Win.<br>Tap once and open it with sound ❤️</p>
+    <button id="openBtn" type="button">Tap to open ❤️</button>
+    <div id="musicStatus"></div>
+  </div>
+</div>
+<div class="decor" id="decor"></div>
+<button class="mute" id="muteBtn" type="button" aria-label="Mute or unmute music">🔊</button>
+<main id="page">
+  <section class="hero">
+    <div class="eyebrow">☀️ Good morning, my favorite person</div>
+    <h2>Good morning beb ❤️</h2>
+    <p>Love you so much my babe, can’t wait to see you this evening.</p>
+  </section>
+  <section class="card">
+    <h3 class="title">A little note for you</h3>
+    <div class="message" id="typed"></div>
+  </section>
+  <section class="card">
+    <h3 class="title">My favorite little collection of us</h3>
+    <div class="gallery">
+      <figure class="polaroid"><img src="assets/photo1.jpg" alt="Win and Kon Pov together"><figcaption class="cap">My pretty girl & my happy place</figcaption></figure>
+      <figure class="polaroid"><img src="assets/photo2.jpg" alt="Win and Kon Pov together"><figcaption class="cap">Even your serious face is cute beb</figcaption></figure>
+      <figure class="polaroid"><img src="assets/photo3.jpg" alt="Win and Kon Pov together"><figcaption class="cap">Adventure partner forever</figcaption></figure>
+      <figure class="polaroid"><img src="assets/photo4.jpg" alt="Win and Kon Pov together"><figcaption class="cap">Still can’t believe I found you</figcaption></figure>
+    </div>
+  </section>
+  <section class="card">
+    <h3 class="title">Our time together</h3>
+    <div class="counter-intro">Since <strong>December 5, 2025</strong> ✨</div>
+    <div class="counter">
+      <div class="unit"><b id="d">0</b><span>Days</span></div>
+      <div class="unit"><b id="h">0</b><span>Hours</span></div>
+      <div class="unit"><b id="m">0</b><span>Minutes</span></div>
+      <div class="unit"><b id="s">0</b><span>Seconds</span></div>
+    </div>
+  </section>
+  <section class="card question">
+    <h3 class="title">One important question...</h3>
+    <p>Do you miss me, Kon Pov? 💕</p>
+    <div class="stage" id="stage">
+      <button class="answer" id="yes" type="button">YES ❤️</button>
+      <button class="answer" id="no" type="button">NO 🙈</button>
+    </div>
+    <div id="tease">Choose carefully beb 😌</div>
+    <div id="final"><h3>Hehe, I knew it 💖</h3><p>I miss you too. See you tomorrow ❤️<br>And if you say otherwise… you’re just faking again 😏</p></div>
+  </section>
+  <section class="card footer">Made just for Kon Pov, from Win 💌</section>
+</main>
+<audio id="song" preload="auto" loop playsinline webkit-playsinline>
+  <source src="until-i-found-you.mp3" type="audio/mpeg">
+</audio>
+<script>
+(() => {
+  const gate=document.getElementById('gate'),openBtn=document.getElementById('openBtn'),page=document.getElementById('page');
+  const song=document.getElementById('song'),status=document.getElementById('musicStatus'),muteBtn=document.getElementById('muteBtn');
+  let entered=false;
+  async function enter(){
+    if(entered)return; entered=true;
+    // This play() happens directly inside the user's tap, which is what iPhone Safari requires.
+    try{
+      song.volume=.72;
+      await song.play();
+      muteBtn.classList.add('show');
+      muteBtn.textContent='🔊';
+    }catch(e){
+      status.textContent='Opening without music — add “until-i-found-you.mp3” beside this HTML.';
+    }
+    gate.classList.add('hide'); page.classList.add('show');
+    setTimeout(()=>gate.remove(),900);
+    startTyping();
+  }
+  openBtn.addEventListener('click',enter,{passive:true});
+  openBtn.addEventListener('touchend',e=>{e.preventDefault();enter();},{passive:false});
+  muteBtn.addEventListener('click',async()=>{
+    if(song.paused){try{await song.play();muteBtn.textContent='🔊'}catch(e){}}else{song.pause();muteBtn.textContent='🔇'}
+  });
+
+  const text='Love you so much my babe, can’t wait to see you this evening.';
+  let ti=0,typingStarted=false;
+  function startTyping(){if(typingStarted)return;typingStarted=true;const el=document.getElementById('typed');(function tick(){if(ti<=text.length){el.innerHTML=text.slice(0,ti)+'<span class="cursor">|</span>';ti++;setTimeout(tick,38)}})()}
+
+  function counter(){const start=new Date('2025-12-05T00:00:00');let sec=Math.max(0,Math.floor((Date.now()-start.getTime())/1000));document.getElementById('d').textContent=Math.floor(sec/86400);sec%=86400;document.getElementById('h').textContent=Math.floor(sec/3600);sec%=3600;document.getElementById('m').textContent=Math.floor(sec/60);document.getElementById('s').textContent=sec%60}
+  counter();setInterval(counter,1000);
+
+  const decor=document.getElementById('decor');['💗','💕','♡','✨'].forEach((icon,j)=>{for(let i=0;i<5;i++){const e=document.createElement('span');e.className='float';e.textContent=icon;e.style.left=(Math.random()*100)+'vw';e.style.fontSize=(14+Math.random()*15)+'px';e.style.animationDuration=(9+Math.random()*9)+'s';e.style.animationDelay=(-Math.random()*12)+'s';decor.appendChild(e)}});
+
+  const yes=document.getElementById('yes'),no=document.getElementById('no'),stage=document.getElementById('stage'),tease=document.getElementById('tease'),final=document.getElementById('final');
+  const lines=['Wrong answer beb 😂','Faking again? 😏','Try again my love 💕','I know you miss me 😌','Very engaged in giving the wrong answer huh? 😆','Still faking? Click the right one ❤️'];
+  let n=0,yesScale=1;
+  function dodge(ev){if(ev){ev.preventDefault();ev.stopPropagation()}const sr=stage.getBoundingClientRect(),br=no.getBoundingClientRect(),pad=10,maxX=Math.max(pad,sr.width-br.width-pad),maxY=Math.max(pad,sr.height-br.height-pad);no.style.left=(pad+Math.random()*(maxX-pad))+'px';no.style.top=(pad+Math.random()*(maxY-pad))+'px';no.style.right='auto';tease.textContent=lines[n++%lines.length];yesScale=Math.min(1.45,yesScale+.07);yes.style.transform=`scale(${yesScale})`;}
+  no.addEventListener('pointerdown',dodge);
+  no.addEventListener('click',dodge);
+  yes.addEventListener('click',()=>{final.classList.add('show');no.style.display='none';tease.textContent='I knew it, my love 💖';burst();setTimeout(()=>final.scrollIntoView({behavior:'smooth',block:'center'}),120)});
+  function burst(){const icons=['💖','💕','💗','❤️','✨'];for(let i=0;i<30;i++){const e=document.createElement('span');e.className='confetti';e.textContent=icons[Math.floor(Math.random()*icons.length)];e.style.left=Math.random()*100+'vw';e.style.fontSize=(15+Math.random()*17)+'px';e.style.animationDelay=Math.random()*.7+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),3400)}}
+})();
+</script>
+</body>
+</html>
